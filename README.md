@@ -37,6 +37,7 @@ docker run --restart always --name php7.2  -p 80:80 -v /danke/:/var/www/ -itd  p
 
 
 <h3>进入容器 执行 composer update -vvv </h3>
+
 ```bash docker exec -it php7.2 bash```
 
 
