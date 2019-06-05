@@ -1,5 +1,6 @@
 <h1>蛋壳本地开发环境搭建</h1>
 <hr>
+<h2>目前为初版可能会遇到各种问题，希望大家加入进来一起完善</h2>
 <h3>首先确保你的电脑已经安装了docker环境</h3>
 
 可以查看一下 MAC 安装 docker 环境的方法 <a href="https://www.jianshu.com/p/9142187552db">https://www.jianshu.com/p/9142187552db</a>
@@ -45,9 +46,7 @@
 
 如果能正常访问则恭喜你环境搭建成功！	
 
-
 <h3>【注意】 在本地增加Class或者引入新的Composer包后都推荐执行一次</h3>
-	composer dumpautoload; php artisan clear-compiled; php artisan ide-helper:generate -M; php artisan ide-helper:models -n; php artisan optimize;
+		composer dumpautoload; php artisan clear-compiled; php artisan ide-helper:generate -M; php artisan ide-helper:models -n; php artisan optimize;
 
 
-<h2>目前为初版可能会遇到各种问题，希望大家加入进来一起完善</h2>
