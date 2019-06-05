@@ -1,14 +1,14 @@
-#蛋壳本地开发环境搭建
+<h1>蛋壳本地开发环境搭建</h1>
 <hr>
-###首先确保你的电脑已经安装了docker环境
+<h3>首先确保你的电脑已经安装了docker环境</h3>
 
-#### 可以查看一下 MAC 安装 docker 环境的方法 <a href="https://www.jianshu.com/p/9142187552db">https://www.jianshu.com/p/9142187552db</a>
+可以查看一下 MAC 安装 docker 环境的方法 <a href="https://www.jianshu.com/p/9142187552db">https://www.jianshu.com/p/9142187552db</a>
 
 
-###第一步拉取镜像文件
+<h3>第一步拉取镜像文件</h3>
 ``docker pull registry.cn-beijing.aliyuncs.com/aliyun-php/danke_php72``
 
-###第二步运行docker 容器
+<h3>第二步运行docker 容器</h3>
 
 ``docker run --restart always --name php7.2  -p 80:80 -v /danke/:/var/www/ -itd  php7.2:latest
 ``
@@ -21,7 +21,7 @@
 	
 	-v /danke/:/var/www/  将本地 /danke/ 目录挂载到 容器的/var/www/目录下 （本地目录根据自己项目位置自定义）
 
-###第三步定义本地 hosts文件
+<h3>第三步定义本地 hosts文件</h3>
 
 127.0.0.1 dev.test.laputa.com
 
@@ -32,12 +32,12 @@
 	config文件自己可以根据自己需求随意更改
 
 
-###最后一步
+<h3>最后一步</h3>
 打开浏览器 访问 dev.test.crm_feedback.com 或者	dev.test.laputa.com
 
 如果能正常访问则恭喜你环境搭建成功！
 
 
 
-<hr>
-### 目前为初版可能会遇到各种问题，希望大家加入进来一起完善
+
+<h2>目前为初版可能会遇到各种问题，希望大家加入进来一起完善</h2>
