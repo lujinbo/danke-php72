@@ -51,6 +51,7 @@ docker run --restart always --name php7.2  -p 80:80 -v /danke/:/var/www/ -itd  p
 如果能正常访问则恭喜你环境搭建成功！	
 
 <h3>【注意】 在本地增加Class或者引入新的Composer包后都推荐执行一次</h3>
+
 ```bash 
 
 composer dumpautoload; php artisan clear-compiled; php artisan ide-helper:generate -M; php artisan ide-helper:models -n; php artisan optimize;
