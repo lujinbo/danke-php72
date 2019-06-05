@@ -36,3 +36,8 @@
 打开浏览器 访问 dev.test.crm_feedback.com 或者	dev.test.laputa.com
 
 如果能正常访问则恭喜你环境搭建成功！
+
+
+
+<hr>
+### 目前为初版可能会遇到各种问题，希望大家加入进来一起完善
