@@ -32,12 +32,22 @@
 	config文件自己可以根据自己需求随意更改
 
 
+<h3>进入容器 执行 composer update -vvv </h3>
+``docker exec -it php7.2 bash``
+
+	如果已经执行过，无需在执行
+	cd /var/www/项目目录
+	composer update -vvv
+
+
 <h3>最后一步</h3>
 打开浏览器 访问 dev.test.crm_feedback.com 或者	dev.test.laputa.com
 
-如果能正常访问则恭喜你环境搭建成功！
+如果能正常访问则恭喜你环境搭建成功！	
 
 
+<h3>【注意】 在本地增加Class或者引入新的Composer包后都推荐执行一次</h3>
+	composer dumpautoload; php artisan clear-compiled; php artisan ide-helper:generate -M; php artisan ide-helper:models -n; php artisan optimize;
 
 
 <h2>目前为初版可能会遇到各种问题，希望大家加入进来一起完善</h2>
