@@ -1,18 +1,21 @@
 <h1>蛋壳本地开发环境搭建</h1>
-<hr>
-<h2>目前为初版可能会遇到各种问题，希望大家加入进来一起完善</h2>
+<h3>*** 目前为初版可能会遇到各种问题，希望大家加入进来一起完善 ***</h3>
 <h3>首先确保你的电脑已经安装了docker环境</h3>
 
 可以查看一下 MAC 安装 docker 环境的方法 <a href="https://www.jianshu.com/p/9142187552db">https://www.jianshu.com/p/9142187552db</a>
 
 
 <h3>第一步拉取镜像文件</h3>
-``docker pull registry.cn-beijing.aliyuncs.com/aliyun-php/danke_php72``
+
+```bash
+docker pull registry.cn-beijing.aliyuncs.com/aliyun-php/danke_php72
+```
 
 <h3>第二步运行docker 容器</h3>
 
-``docker run --restart always --name php7.2  -p 80:80 -v /danke/:/var/www/ -itd  php7.2:latest
-``
+```bash 
+docker run --restart always --name php7.2  -p 80:80 -v /danke/:/var/www/ -itd  php7.2:latest
+```
 
 	--restart always 容器自动重启
 	
@@ -34,7 +37,8 @@
 
 
 <h3>进入容器 执行 composer update -vvv </h3>
-``docker exec -it php7.2 bash``
+```bash docker exec -it php7.2 bash```
+
 
 	如果已经执行过，无需在执行
 	cd /var/www/项目目录
@@ -47,6 +51,10 @@
 如果能正常访问则恭喜你环境搭建成功！	
 
 <h3>【注意】 在本地增加Class或者引入新的Composer包后都推荐执行一次</h3>
-		composer dumpautoload; php artisan clear-compiled; php artisan ide-helper:generate -M; php artisan ide-helper:models -n; php artisan optimize;
+```bash 
+
+composer dumpautoload; php artisan clear-compiled; php artisan ide-helper:generate -M; php artisan ide-helper:models -n; php artisan optimize;
+
+```
 
 
